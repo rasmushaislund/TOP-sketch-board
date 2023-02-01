@@ -1,14 +1,15 @@
 * {
     box-sizing: border-box;
     color: rgba(232, 234, 237, 1);
+    background-color: rgba(32, 33, 36, 1);
+    border-color:rgba(32, 33, 36, 1);
+    font-family: 'Fredoka One', 'Courier New', Courier, monospace;
 }
 
 
 body {
-    background-color: rgba(32, 33, 36, 1);
     height: 100vh;
     overflow: auto;
-    font-family: 'Fredoka One', 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,14 +45,115 @@ body {
     border: .2rem solid rgba(232, 234, 237, 1);
     border-radius: .5rem;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 7rem;
+    padding: 2rem;
+    column-gap: 4rem;
+
 }
 
 .grid {
     display: flex;
+    border: .1rem solid rgba(232, 234, 237, .5);
+    height: 40rem;
+    width: 40rem;
+    background-color: white;
 }
 
 .ui-panel {
     display: flex;
     flex-direction: column;
+    /*border: .1rem solid rgba(232, 234, 237, .5); */
+    flex: 1;
 }
+
+.sketch-subheader {
+    color:rgba(232, 234, 237, .5);
+    margin-bottom: .5rem;
+}
+
+.color-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: .7rem;
+    margin-bottom: 2rem;
+}
+
+.color {
+    border-radius: 3.125rem;
+    height: 40px;
+    width: 40px;
+}
+
+#red-pen {
+    background-color: rgba(219,13,83,1);
+}
+
+#green-pen {
+    background-color: rgba(109,161,65,1);
+}
+
+#blue-pen {
+    background-color: rgba(30,84,190,1);
+}
+
+#rainbow-pen {
+    background: linear-gradient(90deg,
+     rgba(214,123,3,1) 10%,
+      rgba(214,141,3,1) 20%,
+       rgba(249,235,22,1) 30%,
+        rgba(109,161,65,1) 40%,
+         rgba(56,196,152,1) 50%,
+          rgba(30,84,190,1) 60%,
+           rgba(149,28,204,1) 70%,
+            rgba(201,37,137,1) 80%,
+             rgba(219,13,83,1) 90%,
+              rgba(255,0,0,1) 100%);
+}
+
+#eraser {
+    height: 40px;
+    width: 40px;
+}
+
+.slider {
+    margin-bottom: .5rem;
+}
+
+.resol-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: .3rem;
+}
+
+.resol-output {
+    background-color: rgba(232, 234, 237, 1);
+    border-radius: .2rem;
+    color: rgba(32, 33, 36, 1);
+    padding: .3rem;
+    min-width: 4.375rem;
+    text-align: center;;
+}
+
+button {
+    border: .1rem solid rgba(232, 234, 237, 1);
+    padding: .7rem;
+}
+
+button:hover {
+    background-color: rgba(232, 234, 237, .3);
+}
+
+#background-color {
+    border: .1rem solid rgba(232, 234, 237, 1);
+    background-color: white;
+}
+
+.color-picker {
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
