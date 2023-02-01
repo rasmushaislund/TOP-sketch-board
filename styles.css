@@ -1,3 +1,57 @@
 * {
     box-sizing: border-box;
+    color: rgba(232, 234, 237, 1);
+}
+
+
+body {
+    background-color: rgba(32, 33, 36, 1);
+    height: 100vh;
+    overflow: auto;
+    font-family: 'Fredoka One', 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.header-text {
+    background: linear-gradient(90deg,
+     rgba(214,123,3,1) 10%,
+      rgba(214,141,3,1) 20%,
+       rgba(249,235,22,1) 30%,
+        rgba(109,161,65,1) 40%,
+         rgba(56,196,152,1) 50%,
+          rgba(30,84,190,1) 60%,
+           rgba(149,28,204,1) 70%,
+            rgba(201,37,137,1) 80%,
+             rgba(219,13,83,1) 90%,
+              rgba(255,0,0,1) 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+}
+
+
+.sketch-container {
+    height: 50rem;
+    width: 75rem;
+    border: .2rem solid rgba(232, 234, 237, 1);
+    border-radius: .5rem;
+    display: flex;
+    margin-bottom: 7rem;
+}
+
+.grid {
+    display: flex;
+}
+
+.ui-panel {
+    display: flex;
+    flex-direction: column;
 }
