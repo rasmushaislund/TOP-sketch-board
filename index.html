@@ -15,30 +15,31 @@
         <h1 class="header-text">Sketch board</h1>
     </div>
     <div class="sketch-container">
-        <div class="grid"></div>
         <div class="ui-panel">
             <div class="sketch-subheader">Pen color</div>
             <div class="color-icons">
-                <img/>
-                <img/>
-                <img/>
-                <img/>
+                <div class="color" id="red-pen"></div>
+                <div class="color" id="green-pen"></div>
+                <div class="color" id="blue-pen"></div>
+                <div class="color" id="rainbow-pen"></div>
+                    <img class="color" id="eraser" src="/img/eraser.svg" alt="icon showing an eraser"/>
             </div>
             <div class="sketch-subheader">Resolution</div>
             <div class="slider">Slider</div>
             <div class="resol-feature">
-                <div class="resol-output">Box</div>
+                <div class="resol-output">100 x 100</div>
                 <div class="resol-uom">pixel</div>
             </div>
-            <button class="btn-clear">Clear</button>
             <div class="grid-background">
-                <div class="grid-color">Background color</div>
+                <div class="sketch-subheader grid-color">Background color</div>
                 <div class="color-picker">
                     <button class="btn-color">Color picker</button>
-                    <div class="chosen-color"></div>
+                    <div class="color" id="background-color"></div>
                 </div>
             </div>
+            <button class="btn-clear">Clear</button>
         </div>
+        <div class="grid"></div>
     </div>
     
     
@@ -48,5 +49,7 @@
 
 
     <p>Created by <a href="https://github.com/rasmushaislund">Rasmus H.</a></p>
+    <p>Icon by <a href="https://freeicons.io/profile/287517">ColourByteDesigns</a> on <a href="https://freeicons.io">freeicons.io</a></p>
+                                
 </body>
 </html>
