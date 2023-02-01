@@ -5,11 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketch-board</title>
-    <link rel="stylesheet" href="./styles.css/">
+    <link rel="stylesheet" href="./styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>Hello</h1>
+    <!-- <img src="/img/paint-palette.svg"/> -->
+    <div class="header">
+        <h1 class="header-text">Sketch board</h1>
+    </div>
+    <div class="sketch-container">
+        <div class="grid"></div>
+        <div class="ui-panel">
+            <div class="sketch-subheader">Pen color</div>
+            <div class="color-icons">
+                <img/>
+                <img/>
+                <img/>
+                <img/>
+            </div>
+            <div class="sketch-subheader">Resolution</div>
+            <div class="slider">Slider</div>
+            <div class="resol-feature">
+                <div class="resol-output">Box</div>
+                <div class="resol-uom">pixel</div>
+            </div>
+            <button class="btn-clear">Clear</button>
+            <div class="grid-background">
+                <div class="grid-color">Background color</div>
+                <div class="color-picker">
+                    <button class="btn-color">Color picker</button>
+                    <div class="chosen-color"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    
+
+
+
+
+
+    <p>Created by <a href="https://github.com/rasmushaislund">Rasmus H.</a></p>
 </body>
 </html>
