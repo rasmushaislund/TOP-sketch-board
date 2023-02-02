@@ -85,15 +85,15 @@ body {
     width: 40px;
 }
 
-#red-pen {
+#red-background {
     background-color: rgba(219,13,83,1);
 }
 
-#green-pen {
+#green-background {
     background-color: rgba(109,161,65,1);
 }
 
-#blue-pen {
+#blue-background {
     background-color: rgba(30,84,190,1);
 }
 
@@ -145,7 +145,7 @@ button:hover {
     background-color: rgba(232, 234, 237, .3);
 }
 
-#background-color {
+#pen-color {
     border: .1rem solid rgba(232, 234, 237, 1);
     background-color: white;
 }
