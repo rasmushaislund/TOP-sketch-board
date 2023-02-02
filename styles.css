@@ -52,6 +52,12 @@ body {
 
 }
 
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
 .grid {
     display: flex;
     border: .1rem solid rgba(232, 234, 237, .5);
@@ -83,6 +89,10 @@ body {
     border-radius: 3.125rem;
     height: 40px;
     width: 40px;
+}
+
+#white-background {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #red-background {
