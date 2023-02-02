@@ -92,6 +92,46 @@ body {
     box-shadow: 0 0 0 2px rgba(232, 234, 237, 1);
 }
 
+#eraser {
+    height: 40px;
+    width: 40px;   
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(232, 234, 237, 1);
+    outline: none;
+    opacity: .7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    width: 50%;
+    height: .8rem;
+    border-radius: 3.125rem;
+    margin-bottom: .7rem;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 1.5rem; 
+    height: 1.5rem;
+    border-radius: 3.125rem; 
+    background: rgba(90, 211, 140); 
+    cursor: pointer; 
+  }
+  
+  .slider::-moz-range-thumb { /*for mozilla browser */
+    width: 1.5rem; 
+    height: 1.5rem;
+    border-radius: 3.125rem;  
+    background: rgba(90, 211, 140); 
+    cursor: pointer; 
+  }
 
 #white-background {
     background-color: rgba(255, 255, 255, 1);
@@ -121,16 +161,6 @@ body {
             rgba(201,37,137,1) 80%,
              rgba(219,13,83,1) 90%,
               rgba(255,0,0,1) 100%);
-}
-
-#eraser {
-    height: 40px;
-    width: 40px;
-    
-}
-
-.slider {
-    margin-bottom: .5rem;
 }
 
 .resol-feature {
