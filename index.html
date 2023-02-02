@@ -17,12 +17,11 @@
     <div class="sketch-container">
         <div class="ui-panel">
             <div class="sketch-subheader">Pen color</div>
-            <div class="color-icons">
-                <div class="color" id="red-pen"></div>
-                <div class="color" id="green-pen"></div>
-                <div class="color" id="blue-pen"></div>
+            <div class="color-picker">
+                <button class="btn-color">Color picker</button>
+                <div class="color" id="pen-color"></div>
                 <div class="color" id="rainbow-pen"></div>
-                    <img class="color" id="eraser" src="/img/eraser.svg" alt="icon showing an eraser"/>
+                <img class="color" id="eraser" src="/img/eraser.svg" alt="icon showing an eraser"/>
             </div>
             <div class="sketch-subheader">Resolution</div>
             <div class="slider">Slider</div>
@@ -32,9 +31,10 @@
             </div>
             <div class="grid-background">
                 <div class="sketch-subheader grid-color">Background color</div>
-                <div class="color-picker">
-                    <button class="btn-color">Color picker</button>
-                    <div class="color" id="background-color"></div>
+                <div class="color-icons">
+                    <div class="color" id="red-background"></div>
+                    <div class="color" id="green-background"></div>
+                    <div class="color" id="blue-background"></div>
                 </div>
             </div>
             <button class="btn-clear">Clear</button>
