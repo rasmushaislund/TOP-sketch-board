@@ -59,10 +59,24 @@ body {
 
 .grid {
     display: flex;
-    border: .1rem solid rgba(232, 234, 237, .5);
+    border: .1rem solid rgba(232, 234, 237, .3);
     height: 40rem;
     width: 40rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     background-color: white;
+    
+}
+
+.row {
+    background-color: white;
+    color: rgba(32, 33, 36, 1);
+    flex: 1;
+    border: 1px solid rgba(232, 234, 237, .3);
 }
 
 .ui-panel {
@@ -90,6 +104,10 @@ body {
     height: 40px;
     width: 40px;
     box-shadow: 0 0 0 2px rgba(232, 234, 237, 1);
+}
+
+.color:hover {
+    cursor: pointer;
 }
 
 #eraser {
