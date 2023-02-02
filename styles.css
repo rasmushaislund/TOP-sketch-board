@@ -2,7 +2,6 @@
     box-sizing: border-box;
     color: rgba(232, 234, 237, 1);
     background-color: rgba(32, 33, 36, 1);
-    border-color:rgba(32, 33, 36, 1);
     font-family: 'Fredoka One', 'Courier New', Courier, monospace;
 }
 
@@ -86,10 +85,13 @@ body {
 }
 
 .color {
+    border: .3rem solid rgba(32, 33, 36, 1);
     border-radius: 3.125rem;
     height: 40px;
     width: 40px;
+    box-shadow: 0 0 0 2px rgba(232, 234, 237, 1);
 }
+
 
 #white-background {
     background-color: rgba(255, 255, 255, 1);
@@ -124,6 +126,7 @@ body {
 #eraser {
     height: 40px;
     width: 40px;
+    
 }
 
 .slider {
@@ -153,11 +156,6 @@ button {
 
 button:hover {
     background-color: rgba(232, 234, 237, .3);
-}
-
-#pen-color {
-    border: .1rem solid rgba(232, 234, 237, 1);
-    background-color: white;
 }
 
 .color-picker {
