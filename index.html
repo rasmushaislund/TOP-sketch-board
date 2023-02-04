@@ -18,13 +18,15 @@
         <div class="ui-panel">
             <div class="sketch-subheader">Pen color</div>
             <div class="color-picker">
-                <button class="btn-color">Color picker</button>
+                <button class="btn-color">Choose color
+                    <input class="color-pick-pop" type="color"/>
+                </button>
                 <div class="color" id="pen-color"></div>    
                 <div class="color" id="rainbow-pen"></div>
                 <img class="color" id="eraser" src="/img/eraser-3.svg" alt="icon showing an eraser"/>
             </div>
             <div class="sketch-subheader">Grid resolution</div>
-            <input class="slider" id="grid-slider" type="range" min="1" max="100">
+            <input class="slider" id="grid-slider" type="range" min="1" max="100" value="16">
             <div class="resol-feature">
                 <div class="resol-output">100 x 100</div>
                 <div class="resol-uom">pixel</div>
@@ -40,6 +42,7 @@
             </div>
         </div>
         <div class="grid-container">
+            <div class="grid"></div>
             <button class="btn-clear">Clear</button>
         </div>
         
