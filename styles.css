@@ -91,6 +91,20 @@ body {
     margin-bottom: .5rem;
 }
 
+#color-pick-pop {
+    padding: 0rem 0.125rem;
+    margin: 0rem;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#color-pick-pop::-webkit-color-swatch {
+    border: none;
+    border-radius: 3.125rem;
+}
+
 .color-icons {
     display: flex;
     justify-content: flex-start;
@@ -98,7 +112,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.color {
+.color-pen, .color-bckg {
     border: .3rem solid rgba(32, 33, 36, 1);
     border-radius: 3.125rem;
     height: 40px;
@@ -106,7 +120,7 @@ body {
     box-shadow: 0 0 0 2px rgba(232, 234, 237, 1);
 }
 
-.color:hover {
+.color-pen:hover, .color-bckg:hover {
     cursor: pointer;
 }
 
