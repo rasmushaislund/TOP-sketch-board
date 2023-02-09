@@ -1,7 +1,4 @@
-//
-
-
-
+// GRID CREATION
 // Variables for grid creation
 let grid = document.querySelector(".grid");
 
@@ -16,8 +13,6 @@ function updateSliderValue() {
     createGrid();
 }
 
-// Reset page when refreshing/loading
-document.getElementsByTagName("body").onload = updateSliderValue(); 
 
 // Remove all children from node .grid
 function removeAllChildren() {
@@ -42,8 +37,8 @@ function createGrid() {
 }
 
 
-
-// Set background color on grid and highlight chosen color
+// SET BACKGROUND COLOR
+// Set DOM-related variables
 let bckgColorSelected = document.querySelectorAll(".color-bckg");
 let whiteBackground = document.querySelector("#white-background");
 let redBackground = document.querySelector("#red-background");
@@ -71,6 +66,7 @@ function clicked(e) {
     let target = e.target;
     target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
     let selectedColor = window.getComputedStyle(target).backgroundColor;
+    console.log(selectedColor);
     modifyPixels(selectedColor);
     }
 
@@ -79,4 +75,21 @@ function modifyPixels(selectedColor) {
     gridPixels.forEach(pixel => {
         pixel.style.backgroundColor = selectedColor;
     })
+}
+
+
+// PEN COLOR FEATURE INCL. ERASER
+// Set DOM-related variables
+
+
+// RESETTING WITH REFRESH/PAGE-LOAD
+// Reset page when refreshing/loading
+document.getElementsByTagName("body").onload = resetSketchBoard();
+
+
+function resetSketchBoard() {
+    updateSliderValue();
+
+
+    
 }
