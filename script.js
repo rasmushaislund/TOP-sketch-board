@@ -41,31 +41,42 @@ function createGrid() {
     }
 }
 
-// let colorPickBtn = document.querySelector(".btn-color");
-// colorPickBtn.addEventListener("click", openColorPicker())
 
-// Show pen color chosen in color-picker
-let penColor = document.querySelector("#pen-color");
-let colorPickPop = document.querySelector(".color-pick-pop");
 
-colorPickPop.addEventListener("change", function () {
-    penColor.style.backgroundColor = this.value;
-});
-
-// Set background color on grid
+// Set background color on grid and highlight chosen color
+let bckgColorSelected = document.querySelectorAll(".color-bckg");
 let whiteBackground = document.querySelector("#white-background");
 let redBackground = document.querySelector("#red-background");
 let greenBackground = document.querySelector("#green-background");
 let blueBackground = document.querySelector("#blue-background");
+let gridPixels = document.querySelectorAll(".row");
 
-whiteBackground.addEventListener("click", setBackgroundColor());
+// Add event listeners for all background color options
+whiteBackground.addEventListener("click", clicked);
+redBackground.addEventListener("click", clicked);
+greenBackground.addEventListener("click", clicked);
+blueBackground.addEventListener("click", clicked);
 
 
-function setBackGroundColor() {
-    
+// Reset boxshadow for background color selection
+function resetSelectedBckg() {
+    bckgColorSelected.forEach(background => {
+        background.style.boxShadow = "none";
+    })
 }
 
+// Set box shadow highlight for selected background color and get the background color
+function clicked(e) {
+    resetSelectedBckg();
+    let target = e.target;
+    target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
+    let selectedColor = window.getComputedStyle(target).backgroundColor;
+    modifyPixels(selectedColor);
+    }
 
-
-
-
+// The chosen and parsed background color is applied to the grid
+function modifyPixels(selectedColor) {
+    gridPixels.forEach(pixel => {
+        pixel.style.backgroundColor = selectedColor;
+    })
+}
