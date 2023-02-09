@@ -68,8 +68,6 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: white;
-    
 }
 
 .row {
@@ -77,6 +75,7 @@ body {
     color: rgba(32, 33, 36, 1);
     flex: 1;
     border: 1px solid rgba(232, 234, 237, .3);
+    cursor: crosshair;
 }
 
 .ui-panel {
@@ -117,7 +116,7 @@ body {
     border-radius: 3.125rem;
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 0 2px rgba(232, 234, 237, 1);
+    /*box-shadow: 0 0 0 2px rgba(232, 234, 237, 1);*/
 }
 
 .color-pen:hover, .color-bckg:hover {
@@ -130,7 +129,7 @@ body {
 
 #eraser {
     height: 40px;
-    width: 40px;   
+    width: 40px;  
 }
 
 .slider {
@@ -189,7 +188,7 @@ body {
     background: linear-gradient(90deg,
      rgba(214,123,3,1) 10%,
       rgba(214,141,3,1) 20%,
-       rgba(249,235,22,1) 30%,
+       #f9eb16 30%,
         rgba(109,161,65,1) 40%,
          rgba(56,196,152,1) 50%,
           rgba(30,84,190,1) 60%,
