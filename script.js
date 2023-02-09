@@ -13,6 +13,18 @@ function updateSliderValue() {
     createGrid();
 }
 
+// RESETTING WITH REFRESH/PAGE-LOAD
+// Reset page when refreshing/loading
+document.getElementsByTagName("body").onload = resetSketchBoard();
+
+
+function resetSketchBoard() {
+    updateSliderValue();
+
+
+    
+}
+
 
 // Remove all children from node .grid
 function removeAllChildren() {
@@ -82,14 +94,3 @@ function modifyPixels(selectedColor) {
 // Set DOM-related variables
 
 
-// RESETTING WITH REFRESH/PAGE-LOAD
-// Reset page when refreshing/loading
-document.getElementsByTagName("body").onload = resetSketchBoard();
-
-
-function resetSketchBoard() {
-    updateSliderValue();
-
-
-    
-}
