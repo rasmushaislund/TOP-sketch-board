@@ -59,11 +59,27 @@ let blueBackground = document.querySelector("#blue-background");
 let gridPixels = document.querySelectorAll(".row");
 
 // Add event listeners for all background color options
-whiteBackground.addEventListener("click", clicked);
-redBackground.addEventListener("click", clicked);
-greenBackground.addEventListener("click", clicked);
-blueBackground.addEventListener("click", clicked);
+whiteBackground.addEventListener("click", backgroundClicked);
+redBackground.addEventListener("click", backgroundClicked);
+greenBackground.addEventListener("click", backgroundClicked);
+blueBackground.addEventListener("click", backgroundClicked);
 
+// Add event listener for when setting new grid resolution
+slider.addEventListener("click", updateBackground);
+
+// Update grid background when slider is clicked
+function updateBackground() {
+    
+}
+
+// Set box shadow highlight for selected background color and get the background color
+function backgroundClicked(e) {
+    resetSelectedBckg();
+    let target = e.target;
+    target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
+    let selectedColor = window.getComputedStyle(target).backgroundColor;
+    colorBackground(selectedColor);
+    }
 
 // Reset boxshadow for background color selection
 function resetSelectedBckg() {
@@ -72,18 +88,8 @@ function resetSelectedBckg() {
     })
 }
 
-// Set box shadow highlight for selected background color and get the background color
-function clicked(e) {
-    resetSelectedBckg();
-    let target = e.target;
-    target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
-    let selectedColor = window.getComputedStyle(target).backgroundColor;
-    console.log(selectedColor);
-    modifyPixels(selectedColor);
-    }
-
 // The chosen and parsed background color is applied to the grid
-function modifyPixels(selectedColor) {
+function colorBackground(selectedColor) {
     gridPixels.forEach(pixel => {
         pixel.style.backgroundColor = selectedColor;
     })
@@ -92,5 +98,41 @@ function modifyPixels(selectedColor) {
 
 // PEN COLOR FEATURE INCL. ERASER
 // Set DOM-related variables
+let penColorSelected = document.querySelectorAll(".color-pen");
+let colorPickPen = document.querySelector("#color-pick-pop");
+let rainbowPen = document.querySelector("#rainbow-pen");
+let eraser = document.querySelector("#eraser");
+    // gridPixels will be re-used from background color section //
+
+// Add event listeners for pen color options
+colorPickPen.addEventListener("click", penClicked);
+rainbowPen.addEventListener("click", penClicked);
+eraser.addEventListener("click", penClicked);
+
+function penClicked(e) {
+    resetSelectedPen();
+    let target = e.target
+    target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
+
+}
+
+function resetSelectedPen() {
+    penColorSelected.forEach(pen => {
+        pen.style.boxShadow = "none";
+    })
+}
+
+// Random generation of RGBA-colors
+let rgbMaxNum = 255;
+let r = Math.floor(Math.random() * rgbMaxNum);
+let g = Math.floor(Math.random() * rgbMaxNum);
+let b = Math.floor(Math.random() * rgbMaxNum);
+let a = Number(Math.random().toFixed(2));
+
+
+
+function randomRGBA(r, g, b, a) {
+    return `rgba(${r},${g},${b},${a})`;
+}
 
 
