@@ -30,9 +30,7 @@ let sliderValue = document.querySelector(".resol-output");
 // Variables related to drawing/coloring feature
 let draw = false;
 let rainbowPenColorRandom;
-console.log(rainbowPenColorRandom);
 let penColor = colorPickPen.value;
-console.log(penColor);
 
 
 // Event listener for updating slider value
@@ -142,7 +140,6 @@ function backgroundClicked(e) {
     let target = e.target;
     target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
     gridBackgroundColor = window.getComputedStyle(target).backgroundColor;
-    console.log(gridBackgroundColor)
     colorBackground(gridBackgroundColor);
     }
 
