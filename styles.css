@@ -39,7 +39,7 @@ body {
 
 .sketch-container {
     height: 50rem;
-    width: 75rem;
+    max-width: 75rem;
     border: .2rem solid rgba(232, 234, 237, 1);
     border-radius: .5rem;
     display: flex;
