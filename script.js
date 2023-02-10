@@ -7,7 +7,6 @@ let redBackground = document.querySelector("#red-background");
 let greenBackground = document.querySelector("#green-background");
 let blueBackground = document.querySelector("#blue-background");
 let gridPixels = document.querySelectorAll(".row");
-let row;
 
 // Set DOM-related variables for pen-color feature
 let penColorSelected = document.querySelectorAll(".color-pen");
@@ -30,7 +29,7 @@ let sliderValue = document.querySelector(".resol-output");
 
 // Variables related to drawing/coloring feature
 let draw = false;
-let penColor = document.querySelector("#color-pick-pop").value;
+let penColor = colorPickPen.value;
 console.log(penColor);
 
 
@@ -52,6 +51,7 @@ function resetSketchBoard() {
     resetSelectedPen();
     defaultPenColor();
     defaultBackgroundColor();
+    penColor = colorPickPen.value;
 }
 
 // Features used for resetting page when loading
@@ -69,7 +69,7 @@ document.getElementsByTagName("body").onload = resetSketchBoard();
 let btnClear = document.querySelector(".btn-clear");
 btnClear.addEventListener("click", resetSketchBoard);
 
-// GRID CREATION AND COLORING
+// GRID CREATION AND PIXEL COLORING
 // Create grid by creating columns and rows and append to .grid parent.
 function createGrid() {
     removeAllChildren();
@@ -165,6 +165,15 @@ function penClicked(e) {
     resetSelectedPen();
     let target = e.target
     target.style.boxShadow = "0 0 0 2px rgba(232, 234, 237, 1)";
+    if (target === eraser) {
+        penColor = gridBackgroundColor;
+    }
+    else if (target === rainbowPen) {
+        penColor = `rgba(${r},${g},${b},${a})`;
+    }
+    else {
+        penColor = colorPickPen.value;
+    }
 
 }
 
@@ -180,11 +189,5 @@ let r = Math.floor(Math.random() * rgbMaxNum);
 let g = Math.floor(Math.random() * rgbMaxNum);
 let b = Math.floor(Math.random() * rgbMaxNum);
 let a = Number(Math.random().toFixed(2));
-
-
-
-function randomRGBA(r, g, b, a) {
-    return `rgba(${r},${g},${b},${a})`;
-}
 
 
