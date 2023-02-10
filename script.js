@@ -29,6 +29,8 @@ let sliderValue = document.querySelector(".resol-output");
 
 // Variables related to drawing/coloring feature
 let draw = false;
+let rainbowPenColorRandom;
+console.log(rainbowPenColorRandom);
 let penColor = colorPickPen.value;
 console.log(penColor);
 
@@ -67,7 +69,11 @@ document.getElementsByTagName("body").onload = resetSketchBoard();
 
 //RESETTING SKETCH BOARD WITH CLEAR BUTTON
 let btnClear = document.querySelector(".btn-clear");
-btnClear.addEventListener("click", resetSketchBoard);
+btnClear.addEventListener("click", clearSketchBoard);
+
+function clearSketchBoard() {
+    updateBackground();    
+}
 
 // GRID CREATION AND PIXEL COLORING
 // Create grid by creating columns and rows and append to .grid parent.
@@ -158,6 +164,7 @@ function colorBackground(gridBackgroundColor) {
 // PEN COLOR FEATURE INCL. ERASER
 // Add event listeners for pen color options
 colorPickPen.addEventListener("click", penClicked);
+colorPickPen.addEventListener("input", updatePenColorValue);
 rainbowPen.addEventListener("click", penClicked);
 eraser.addEventListener("click", penClicked);
 
@@ -169,12 +176,12 @@ function penClicked(e) {
         penColor = gridBackgroundColor;
     }
     else if (target === rainbowPen) {
-        penColor = `rgba(${r},${g},${b},${a})`;
+        randomPenColor(r, g, b, a);
+        penColor = rainbowPenColorRandom;
     }
     else {
         penColor = colorPickPen.value;
     }
-
 }
 
 function resetSelectedPen() {
@@ -190,4 +197,11 @@ let g = Math.floor(Math.random() * rgbMaxNum);
 let b = Math.floor(Math.random() * rgbMaxNum);
 let a = Number(Math.random().toFixed(2));
 
+function randomPenColor(r, g, b, a) {
+    rainbowPenColorRandom = `rgba(${r},${g},${b},${a})`;
+}
 
+
+function updatePenColorValue() {
+    penColor = colorPickPen.value;
+}
