@@ -123,10 +123,6 @@ body {
     cursor: pointer;
 }
 
-#pen-color {
-    cursor: default
-}
-
 #eraser {
     height: 40px;
     width: 40px;  
@@ -217,6 +213,7 @@ body {
 button {
     border: .1rem solid rgba(232, 234, 237, 1);
     padding: .7rem;
+    cursor: pointer;
 }
 
 button:hover {
