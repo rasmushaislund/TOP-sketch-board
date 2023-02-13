@@ -1,18 +1,18 @@
 
 // DOM VARIABLES
 // Set DOM-related variables for background-color feature
-let bckgColorSelected = document.querySelectorAll(".color-bckg");
-let whiteBackground = document.querySelector("#white-background");
-let redBackground = document.querySelector("#red-background");
-let greenBackground = document.querySelector("#green-background");
-let blueBackground = document.querySelector("#blue-background");
-let gridPixels = document.querySelectorAll(".row");
+const bckgColorSelected = document.querySelectorAll(".color-bckg");
+const whiteBackground = document.querySelector("#white-background");
+const redBackground = document.querySelector("#red-background");
+const greenBackground = document.querySelector("#green-background");
+const blueBackground = document.querySelector("#blue-background");
+const gridPixels = document.querySelectorAll(".row");
 
 // Set DOM-related variables for pen-color feature
-let penColorSelected = document.querySelectorAll(".color-pen");
-let colorPickPen = document.querySelector("#color-pick-pop");
-let rainbowPen = document.querySelector("#rainbow-pen");
-let eraser = document.querySelector("#eraser");
+const penColorSelected = document.querySelectorAll(".color-pen");
+const colorPickPen = document.querySelector("#color-pick-pop");
+const rainbowPen = document.querySelector("#rainbow-pen");
+const eraser = document.querySelector("#eraser");
     // gridPixels will be re-used from background color section //
 
 
@@ -29,9 +29,16 @@ let sliderValue = document.querySelector(".resol-output");
 
 // Variables related to drawing/coloring feature
 let draw = false;
+let rainbowPenSelected = false;
 let rainbowPenColorRandom;
 let penColor = colorPickPen.value;
 
+// Random generation of RGBA-colors
+let rgbMaxNum = 255;
+let r = Math.floor(Math.random() * rgbMaxNum);
+let g = Math.floor(Math.random() * rgbMaxNum);
+let b = Math.floor(Math.random() * rgbMaxNum);
+let a = Number(Math.random().toFixed(2));
 
 // Event listener for updating slider value
 slider.addEventListener("mouseup", updateSliderValue);
@@ -173,6 +180,7 @@ function penClicked(e) {
         penColor = gridBackgroundColor;
     }
     else if (target === rainbowPen) {
+        rainbowPenSelected = true;
         randomPenColor(r, g, b, a);
         penColor = rainbowPenColorRandom;
     }
@@ -187,12 +195,7 @@ function resetSelectedPen() {
     })
 }
 
-// Random generation of RGBA-colors
-let rgbMaxNum = 255;
-let r = Math.floor(Math.random() * rgbMaxNum);
-let g = Math.floor(Math.random() * rgbMaxNum);
-let b = Math.floor(Math.random() * rgbMaxNum);
-let a = Number(Math.random().toFixed(2));
+
 
 function randomPenColor(r, g, b, a) {
     rainbowPenColorRandom = `rgba(${r},${g},${b},${a})`;
