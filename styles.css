@@ -16,7 +16,9 @@ body {
 
 .header {
     display: flex;
-    column-gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-text {
@@ -34,17 +36,22 @@ body {
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
     font-size: 5rem;
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+.para-header {
+    margin-bottom: 3rem;
 }
 
 
 .sketch-container {
-    height: 50rem;
+    max-height: 50rem;
     max-width: 75rem;
     border: .2rem solid rgba(232, 234, 237, 1);
     border-radius: .5rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     padding: 2rem;
     column-gap: 4rem;
 
@@ -225,4 +232,8 @@ button:hover {
     gap: .7rem;
     align-items: center;
     margin-bottom: 2rem;
+}
+
+.credits {
+    font-size: .8rem;
 }
