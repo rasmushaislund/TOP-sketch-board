@@ -190,7 +190,6 @@ function penClicked(e) {
         penColor = colorPickPen.value;
         rainbowPenSelected = false;
     }
-    console.log(rainbowPenSelected);
 }
 
 function resetSelectedPen() {
