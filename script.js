@@ -99,6 +99,7 @@ function createGrid() {
                 }
             })
             row.addEventListener("mousedown", function() { // Color pixel on mouse down
+                event.preventDefault();
                 if (rainbowPenSelected === true) {
                     randomPenColor();
                     row.style.backgroundColor = penColor;
